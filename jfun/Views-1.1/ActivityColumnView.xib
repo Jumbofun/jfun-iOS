@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="ActivityColumnView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="activityColumn-main-location-background" translatesAutoresizingMaskIntoConstraints="NO" id="Nob-Q6-ZBZ">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="Wd6-Uq-LDW"/>
+                        <constraint firstAttribute="width" constant="50" id="d7m-l0-UEE"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqt-1s-4gR">
+                    <rect key="frame" x="24" y="6" width="13" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" image="activityColumn-main-location-location">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="locationButtonPressed:" destination="1" eventType="touchUpInside" id="tcM-lw-EhH"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="q0h-qT-4i2">
+                    <rect key="frame" x="0.0" y="78" width="320" height="322"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="322" id="IQR-y4-Rce"/>
+                    </constraints>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Nob-Q6-ZBZ" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="0aQ-S3-Eor"/>
+                <constraint firstAttribute="trailing" secondItem="q0h-qT-4i2" secondAttribute="trailing" id="2Lt-K9-vFx"/>
+                <constraint firstItem="Nob-Q6-ZBZ" firstAttribute="centerY" secondItem="sqt-1s-4gR" secondAttribute="centerY" id="8r9-Vk-TnV"/>
+                <constraint firstItem="q0h-qT-4i2" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="UTg-Ht-wBz"/>
+                <constraint firstAttribute="bottom" secondItem="q0h-qT-4i2" secondAttribute="bottom" id="Vpb-yz-Wvi"/>
+                <constraint firstItem="sqt-1s-4gR" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="24" id="YqD-83-3u6"/>
+                <constraint firstItem="Nob-Q6-ZBZ" firstAttribute="top" secondItem="1" secondAttribute="top" id="tQw-43-zBL"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="tableView" destination="q0h-qT-4i2" id="7Yv-lJ-IGA"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="activityColumn-main-location-background" width="50" height="35"/>
+        <image name="activityColumn-main-location-location" width="13" height="23"/>
+    </resources>
+</document>

@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  jfun
+
+  Created by mmm on 14-2-5.
+  Copyright (c) 2014年 miqu. All rights reserved.
+*/
+"no-network"="无法连接到网络，请检查网络设置:<";
+"loading"="努力加载中...";
+"favorate"="收藏成功:)";
+"defavorate"="取消收藏:)";
